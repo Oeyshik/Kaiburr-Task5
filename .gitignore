@@ -1,0 +1,5 @@
+# Ignore cache files
+.angular/cache/
+
+# Ignore log files
+*.log
