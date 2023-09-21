@@ -8,7 +8,7 @@ import { Server } from './server';
 })
 export class ServerService {
 
-  private baseUrl = "http://localhost:8080/api/servers"
+  private baseUrl = "http://kaiburr-app.s3-website.ap-south-1.amazonaws.com/servers"
 
   constructor(private http: HttpClient) { }
 
