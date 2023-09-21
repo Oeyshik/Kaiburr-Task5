@@ -19,7 +19,7 @@ The project is structured as follows:
 - `codebuild/`: AWS CodeBuild configuration file.
   - `.codebuild.yaml`
 - `README.md`: This README file.
--  
+   
 ## Key Features
 - Automates the build and deployment of an Angular application to an S3 bucket.
 - Uses AWS CodePipeline for setting up a CICD pipeline.
