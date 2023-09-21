@@ -1,0 +1,25 @@
+<div class="mat-dialog-content">
+  <h2>Edit Server</h2>
+  <form #editServerForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="id">ID</label>
+      <input type="text" id="id" name="id" [(ngModel)]="editedServer.id" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="editedServer.name" required>
+    </div>
+    <div class="form-group">
+      <label for="language">Language</label>
+      <input type="text" id="language" name="language" [(ngModel)]="editedServer.language" required>
+    </div>
+    <div class="form-group">
+      <label for="framework">Framework</label>
+      <input type="text" id="framework" name="framework" [(ngModel)]="editedServer.framework" required>
+    </div>
+    <div class="mat-dialog-actions">
+      <button mat-button (click)="onSubmit()" [disabled]="!editServerForm.valid">Update</button>
+      <button mat-button (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

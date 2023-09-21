@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <h2 class="text-center">Server List</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Language</th>
+        <th scope="col">Framework</th>
+        <th scope="col">Modify</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Loop through the 'servers' array and populate table rows -->
+      <tr *ngFor="let server of servers">
+        <td>{{ server.id }}</td>
+        <td>{{ server.name }}</td>
+        <td>{{ server.language }}</td>
+        <td>{{ server.framework }}</td>
+        <td>
+          <!-- Add buttons or actions for modifying the server here -->
+          <button class="btn btn-warning mx-1" (click)="openEditDialog(server)">Edit</button>
+          <button class="btn btn-danger mx-1" (click)="deleteServer(server)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

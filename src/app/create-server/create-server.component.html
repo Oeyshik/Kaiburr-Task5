@@ -1,0 +1,29 @@
+<div class="mat-dialog-content">
+  <h2>Create Server</h2>
+  <form #serverForm="ngForm">
+    <div class="form-group">
+      <label for="id">ID</label>
+      <input type="text" id="id" name="id" [(ngModel)]="newServer.id" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="newServer.name" required>
+    </div>
+    <div class="form-group">
+      <label for="language">Language</label>
+      <input type="text" id="language" name="language" [(ngModel)]="newServer.language" required>
+    </div>
+    <div class="form-group">
+      <label for="framework">Framework</label>
+      <input type="text" id="framework" name="framework" [(ngModel)]="newServer.framework" required>
+    </div>
+  </form>
+</div>
+<div class="mat-dialog-actions">
+  <button mat-button (click)="createServer()" [disabled]="!serverForm.valid">Create</button>
+  <button mat-button (click)="closeDialog()">Cancel</button>
+</div>
+
+<div class="alert alert-success mt-3" #successAlert role="alert" [hidden]="!showSuccessMessage">
+  Server Created Successfully
+</div>
